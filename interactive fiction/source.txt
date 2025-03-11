@@ -1,0 +1,270 @@
+"Life after death" by zhou kai sheng
+
+Release along with an interpreter, a website, cover art ("Life after death")and the source text.
+	
+Chapter 1 - waking up in an unknown place
+
+		
+The Ancient Room is a room. "You awaken in a dimly lit room, your head throbbing with a dull ache. As your eyes adjust to the flickering light of a nearby candle, you realize you are lying in a wide bed, the rough wool blanket tangled around your legs. The smell of aged wood and smoke fills the air, and your body feels stiff, as if you've been asleep for far too long.The room is dimly lit, with walls made of rough-hewn stone. The air smells faintly of woodsmoke and the earthy aroma of aged timber. A wide wooden bed sits against the wall, its frame carved with twisting knotwork patterns. Above the bed, Shields with intricate designs hang on the walls, their colors faded but still vibrant in the candlelight. Across from the bed is an ornate wooden chest with heavy iron fittings, its surface scratched and worn from years of use. A small nightstand on the right side of the bed holds a flickering candle and a simple clay jug, while a sturdy cabinet stands nearby, its doors held shut with iron latches. The floor is covered with rough planks, and a fur rug lies beside the bed."
+
+The bed is scenery in the Ancient Room. The description of the bed is "The bed is wide and inviting, with a carved wooden frame depicting intricate knotwork. A woolen blanket is draped over the mattress, adding a touch of warmth."
+
+The shields are scenery in the Ancient Room. The description of the shields is "The shields are circular and painted with faded designs. They hang proudly on the stone wall, a reminder of battles long past."
+
+The chest is an openable container in the Ancient Room. The chest is closed. The description of the chest is "The chest is made of heavy wood, bound with iron fittings. Its surface bears the marks of rough handling and old age."
+
+The cabinet is a closed openable container in the Ancient Room. The description of the cabinet is "The cabinet is tall and sturdy, its wooden doors locked with iron latches. It looks like it could hold a variety of items."
+
+The cloth is in the cabinet. "A folded cloth lies neatly inside the cabinet." The cloth is portable.
+
+The note is in the cloth. The note is undescribed. The description of the note is "A small, weathered note with faded ink. It seems to contain an important message."
+
+After taking the cloth:
+	now the note is described;
+	say "As you pick up the cloth, something rustles within it—a small note falls to the ground."
+	
+After taking the note:
+	say "You unfold the note and read its contents: 'Youe goal is to find who you are and to regain your name!.' The handwriting in the notes is very distorted."
+
+The nightstand is a supporter in the Ancient Room. On the nightstand is a candle and a jug. The description of the nightstand is "The nightstand is small and plain, made of the same dark wood as the rest of the furniture."
+
+The candle is a lit thing on the nightstand. The description of the candle is "A flickering candle provides a warm, golden light, casting shifting shadows across the room."
+
+The jug is a thing on the nightstand. The description of the jug is "A simple clay jug, unadorned but functional."
+
+The fur rug is scenery in the Ancient Room. The description of the fur rug is "A thick fur rug lies beside the bed, its edges slightly frayed from years of use. It adds a touch of comfort to the otherwise rugged room."
+
+The fireplace is a container in the Ancient Room. "The fireplace is built of rough-hewn stone, its flames casting flickering shadows across the walls. You have a strange feeling about the fireplace." The fireplace is fixed in place. The fireplace contains a fire.
+
+The fire is a thing. "The fire blazes warmly, its orange flames licking at the stone." The fire can be extinguished. The description of the fire is "The flames are bright and warm, but they look like they could be extinguished with the right action."
+
+The trap door is a door. The trap door is east of the Ancient room and above the basement. "A sturdy wooden trap door is set into the floor. Its iron lock gleams faintly in the dim light." The trap door is locked.
+
+The bucket is a container in the Ancient Room. "A wooden bucket filled with water sits near the bed." The bucket is portable. The bucket contains water.
+
+The water is a thing. The water is in the bucket. The description of the water is "Cool, clear water that could be used to extinguish the fire."
+
+The key is a thing in the fireplace. The key is undescribed. The description of the key is "A small iron key, blackened with soot, lies hidden among the ashes."The key unlocks the trap door.
+
+Extinguishing it with is an action applying to two things. Understand "put out [something] with [something]" or "extinguish [something] with [something]" as extinguishing it with.
+
+Check extinguishing it with:
+	if the noun is not the fire :
+		say "You can't extinguish that"instead;
+	if the second noun is not the water:
+		say "You cannot extinguish the fire with that."instead;
+	
+Carry out extinguishing it with:
+	if the fire is in the fireplace:
+		say "You pour the bucket of water onto the fire, and with a loud hiss, the flames die down.";
+		now the fire is extinguished;
+		now the fire is nowhere;
+		now the water is nowhere;
+		say "the room is now dimmer, with only the candle providing light.";
+		now the key is described;
+		say "As the last embers fade, you notice a small iron key lying in the ashes.";
+	otherwise:
+		say "The Fire is already out.";
+
+
+Chapter 2 - conversation with hooded man
+
+The basement is a room. "The basement is dark and musty, with stone walls and a damp earthen floor. Shadows lurk in the corners, and the air is thick with the scent of mildew."
+
+The Man Under a Hood is a person in the basement. The description of the Man Under a Hood is "A tall figure cloaked in a heavy, tattered hood stands in the shadows. His face is obscured by the darkness beneath his hood, but a glimmer of light catches in his eyes as he watches you in silence.".
+
+Interrogative is a kind of value. The interrogatives are who, what, when, where, how, and why.
+
+Current question is an interrogative that varies.
+
+After asking the Man Under a Hood about something: 
+	respond to the question.
+After answering the Man Under a Hood that something: 
+	respond to the question.
+
+After telling the Man Under a Hood about something:
+	say "The hooded man exhales slowly. 'Words carry weight, traveler. Choose them wisely.'"
+
+Table of Hooded Man's Responses
+topic	question type		reply
+"this place/basement/room"  	where	"'You stand in the depths, where time forgets and shadows remember,' the hooded man murmurs."
+"yourself/man/you" 	who	"'I am a watcher, a whisper in the dark, a keeper of truths untold,' he says quietly."
+"me/I/player"  	who	"'You are a seeker, treading paths unknown, searching for what you cannot name,' the man whispers."
+"purpose/path/journey"	what	"'All roads lead somewhere, and all questions beg answers,' he replies enigmatically."
+"escape/exit/door"	how	"'Beyond the veil, past the trials that test your spirit,' he says. 'If you are worthy, the way will reveal itself.'"
+"me/I/player"	where	"'This is the land of forgotten.'he says with some frustration."
+
+
+
+After entering the basement:
+	say "The hooded man tilts his head slightly. 'You seek something. But do you know what it is you truly desire?'"
+
+  After reading a command:
+	if the player's command includes "[interrogative]":
+		now the current question is the interrogative understood.
+
+To respond to the question:
+	repeat through the Table of Hooded Man's Responses:
+		if the topic understood includes topic entry:
+			if the current question is the question type entry:
+				say "[reply entry][paragraph break]";
+				rule succeeds;
+	say "The hooded man lets out a low, knowing hum. 'You are the one to find it out yourself. Try again.'"
+
+Understand "ask [someone] [text]" as asking it about.
+
+The sword is an object in the basement. The description of the sword is "A rusted yet sturdy blade, its hilt wrapped in worn leather. Though aged, it still looks capable of cutting through the darkness."
+
+Leaving is an action applying to one thing.
+
+Understand "leave [thing]" or "say goodbye to [thing]" or "say farewell to [thing]" or "bye [thing]" or "goodbye[thing]" as leaving.
+
+Check leaving:
+	if the noun is not the Man Under a Hood, say "There's nothing listening to you except the hooded man right now."
+Carry out leaving the Man Under a Hood:
+	say "The hooded man inclines his head slightly. 'The road ahead is uncertain, but it is yours to walk. May your blade strike true, seeker.'";
+	if the player does not carry the sword:
+		say "Before you turn away, the hooded man reaches into his cloak and withdraws the rusted sword. 'You will need this,' he says, pressing it into your hands. 'Take it, and wield it wisely.'";
+		now the player carries the sword.
+
+Attacking the Man Under a Hood is an action applying to nothing.
+Understand "attack hooded man" as attacking the Man Under a Hood.
+
+Carry out attacking the Man Under a Hood:
+	say "As you strike, the hooded man lets out a deep, echoing laugh. His form begins to fade into the shadows, leaving only the sound of his laughter behind.[paragraph break]";
+	say "A strange sensation overtakes you... Your vision blurs, and when it clears, you find yourself wearing the hooded cloak.";
+	end the story saying "It's dark, and you find yourself covered in a hood, with cries of pain in your ears".
+
+
+
+
+Chapter 3 - fighting with gargoyle
+
+The wooden door is a door. The wooden door is west of the Ancient Room and east of the battlefield. "A sturdy wooden door stands here, its surface marked by deep scars and gashes from countless blows. The iron bands reinforcing it are rusted with age, yet it remains solid and unyielding. Its heavy lock glints faintly in the dim light with a strange shape." The wooden door is locked.
+
+The wooden stick is in the chest. The wooden stick is undescribed. The description of the wooden stick is "A slender wooden stick, roughly shaped but seemingly useful." The wooden stick unlocks the wooden door.
+
+After opening the chest:
+	now the wooden stick is described;
+	say "As the chest is opened, there is a wooden stick lies inside."
+
+The battlefield is a room. "The battlefield stretches out before you, a vast expanse of churned earth and scattered debris. The air is thick with the lingering scent of blood and steel, mingling with the acrid smoke that still rises from distant fires. Broken weapons and shattered shields litter the ground, silent remnants of a fierce and desperate struggle. In the distance, the silhouettes of fallen warriors lie motionless, their armor gleaming dully in the waning light. The wind howls through the desolation, carrying with it whispers of past battles and lost souls."
+
+The big giant door is a door in the battlefield. "A massive, ancient door stands imposingly at the edge of the battlefield. Its surface is covered in intricate carvings, and it is firmly shut."
+The big giant door is closed and locked.
+
+Understand "look at" or "see" or "watch" as examining.
+	
+The gargoyle is a person in the battlefield. The description of the gargoyle is "A menacing stone gargoyle stands frozen, its eyes glowing faintly. It seems to be watching you."
+
+Player HP is a number that varies. Player HP is 3.
+Hit is a number that varies. Hit is 0.
+
+Combat is a truth state that varies. Combat is false.
+
+After examining the gargoyle:
+	say "As you look closely, the gargoyle suddenly stirs to life, its stone wings flexing as it prepares to attack!";
+	if the player does not carry the sword:
+		say "The gargoyle's eyes flare with a malevolent glow. Without a weapon, you stand no chance!";
+		end the story saying "You have been instantly slain by the gargoyle.";
+	now Combat is true.
+
+Attacking the gargoyle is an action applying to nothing.
+Understand "attack gargoyle" as attacking the gargoyle.
+
+Defending against the gargoyle is an action applying to nothing.
+Understand "defend" as defending against the gargoyle.
+
+Check attacking the gargoyle:
+	if Combat is false:
+		say "There is no need to fight right now." instead.
+
+Carry out attacking the gargoyle:
+	increase Hit by 1;
+	say "You strike at the gargoyle!";
+	if Hit is 1:
+		say "The gargoyle growls, its movements becoming quicker.";
+	if Hit is 2:
+		say "The gargoyle roars furiously and prepares a deadly counterattack! You have some flashbacks in your head.";
+	if Hit is 3:
+		say "You fight back with the gargoyle's terror, delivering a strong, determined blow to the breach. The gargoyle crumbles into dust!";
+		now Combat is false;
+		now the big giant door is open;
+		say "As the gargoyle turns to dust, the massive door creaks open, revealing the path ahead."
+
+Check defending against the gargoyle:
+	if Combat is false:
+		say "There is nothing to defend against right now." instead.
+
+Carry out defending against the gargoyle:
+	decrease Player HP by 1;
+	say "You defend against the gargoyle's attacks, but with some scratches.";
+	if Player HP is 0:
+		say "you have fallen in battle...";
+		end the story saying "you have been slain by the gargoyle.".
+
+Chapter 4 - judgement
+
+The Gray Hall is a room. "A vast, echoing hall stretches before you, its stone pillars rising into darkness. The air is heavy with the scent of old parchment and burning torches. There is a white statue in the middle of the hall"
+
+The big giant door is west of the battlefield and east of the Gray Hall.
+
+The White Statue is a person in the Gray Hall. The description of the White Statue is "A grand, imposing statue of a robed figure stands in the middle of the hall. Its white marble form gleams faintly, and its expression is unreadable, yet it seems to watch you with judgmental eyes.".
+
+Interrogative is a kind of value. The interrogatives are who, what, when, where, how, and why.
+Current question is an interrogative that varies.
+
+After asking the White Statue about something:
+	respond to the statue question.
+After answering the White Statue that something:
+	respond to the statue question.
+
+Table of White Statue's Responses	
+topic	question type		reply
+"life/death/afterlife"   	what		"The statue's voice resonates through the hall: 'Life is but a fleeting moment, and death is the door beyond which truth is revealed. What awaits depends on the weight of one's deeds.'"
+"sin/judgment/fate"  	who		"The statue speaks solemnly: 'Each soul is measured, its sins and virtues balanced. No one escapes the weight of their own actions.'"
+"purpose/morality/truth"   	what		"The statue intones, 'One must ask, is morality a construct or an eternal law? The deeds of life determine the whispers in the void beyond.'"
+"soul/redemption/damnation" 	how		"The statue responds, 'A soul is not lost by a single misdeed nor saved by a single virtue. The path is walked in the totality of choices made.'"
+"gargoyle/monster/stone"	what		"The statue responds,'This is just a trap stone along your jounery.'"
+"me/I/player"	what		"The statue responds,'There will be judgement.'"
+"me/I/player"	who		"The statue responds,'a seeker, a soul, a traveller.'"
+
+After entering the Gray Hall:
+	say "The White Statue's eyes seem to glow faintly as you step forward. 'You who walk in the realm of the living, do you seek understanding?'"
+
+After reading a command:
+	if the player's command includes "[interrogative]":
+		now the current question is the interrogative understood.
+
+To respond to the statue question:
+	repeat through the Table of White Statue's Responses:
+		if the topic understood includes topic entry:
+			if the current question is the question type entry:
+				say "[reply entry][paragraph break]";
+				rule succeeds;
+	say "The White Statue remains motionless for a moment before responding: 'Seek the answers within yourself, for no single truth exists for all.'"
+
+Understand "ask [someone] [text]" as asking it about.
+Check leaving:
+	if the noun is not the white statue, say "There's nothing listening to you except the hooded man right now."
+Carry out leaving the white statue:
+	say "A large pure white balance appeared on the statue's left hand";
+	
+After leaving the White Statue:
+	say "The White Statue raises its hand, and a balance appears, glowing faintly in the dim light. 'Now, step forward,' it commands. 'Stand upon the scales, and let your deeds be judged.'"
+
+Running from the balance is an action applying to nothing.
+Understand "run" or "escape" as running from the balance.
+
+Check running from the balance:
+	say "You turn to flee, but as you do, the world around you fades into darkness.";
+	end the story saying "The white statue raises its hand slowly. You have been eliminated."
+
+Standing on the balance is an action applying to nothing.
+Understand "stand on balance" or "step on scales" as standing on the balance.
+
+Carry out standing on the balance:
+	say "You step onto the balance, and it immediately tilts to the side that holds nothing. A heavy silence fills the hall as the statue observes your fate.[paragraph break]";
+	end the story saying "Your vision is blurry. Your lungs are squeezed. Felling a little panic, you want to shout out. But you only hear a few baby cries."
+	
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old-Fashioned Poem Display</title>
+    <style>
+        body {
+            background-color: #f4ecd8;
+            color: #5a4635;
+            font-family: "Georgia", "Times New Roman", serif;
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .poem {
+            font-size: 1.2em;
+            padding: 20px;
+            border-left: 4px solid #8b6f47;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">A Cento of Stories</h1>
+    <div class="poem">
+        <p class="hidden">In another moment the pale<br>
+        stars alone were visible.</p>
+        <p class="hidden">I was getting confounded<br>
+        stuffy and tired by this time--I must have been down twenty-five minutes<br>
+        or more--and I thought this was good enough.</p>
+
+        <p class="hidden">The <em>Shipping and Mercantile Gazette</em>, the <em>Lloyd’s List</em>,<br>
+        the <em>Packet-Boat</em>, and the <em>Maritime and Colonial Review</em>, all<br>
+        papers devoted to insurance companies which threatened to raise their<br>
+        rates of premium, were unanimous on this point.</p>
+
+        <p class="hidden">That's what they call us, the natives,<br>
+        I mean.</p>
+
+        <p class="hidden">I taught him once more how a Point by motion in One<br>
+        Dimension produces a Line, and how a straight Line in Two Dimensions<br>
+        produces a Square.</p>
+
+        <p class="hidden">"Major?"</p>
+
+        <p class="hidden">Hendricks pushed the curtain back.<br>
+        After a week or so chasing<br>
+        about the fields and lands on empty stomachs, they’ll come and be<br>
+        caught cheerful.</p>
+
+        <p class="hidden">Let me draw one last picture before I close the<br>
+        notebook--a picture which is the last memory of the old country which I<br>
+        bear away with me.</p>
+
+        <p class="hidden">The big ferryboat<br>
+        had just made a journey.</p>
+
+        <p class="hidden">WORSFOLD<br>
+        SOUTH AFRICA: Its History and its Future.</p>
+
+        <p class="hidden">But I had done with the world on the day when my <em>Nautilus</em><br>
+        plunged for the first time beneath the waters.</p>
+
+        <p class="hidden">Its teeth were little, but devilish sharp, and its jaw could<br>
+        not have been very strong or else it would have bitten through my<br>
+        ankle."</p>
+
+        <p class="hidden">"It has pretty nearly," said Thaddy.</p>
+
+        <p class="hidden">"It seemed to me to hit out with its claws pretty freely.<br>
+        Like all other students, I<br>
+        delighted in tobacco; and, seating myself in the great armchair, I began<br>
+        to think.</p>
+
+        <p class="hidden">Where was my uncle? I could easily imagine him tearing along some<br>
+        solitary road, gesticulating, talking to himself, cutting the air with<br>
+        his cane, and still thinking of the absurd bit of hieroglyphics.</p>
+
+        <p class="hidden">At this period the earth sloped<br>
+        downwards; the light took a uniform tint.<br>
+        The Professor looked at me, and<br>
+        there was something humorous at the back of his eyes.</p>
+
+        <p class="hidden">"Come in!" said he.<br>
+        I wish to hide nothing of our position from<br>
+        you--”</p>
+
+        <p class="hidden">“And you are right, my dear Cyrus,” replied the reporter, with<br>
+        animation.</p>
+
+        <p class="hidden">Then<br>
+        their fears suddenly aroused, they disappeared, bounding over the rocks.</p>
+
+        <p class="hidden">“Good-bye, till we meet again,” cried Pencroft, as he watched them, in<br>
+        such a comical tone that Cyrus Harding, Gideon Spilett, Herbert, and Neb<br>
+        could not help laughing.</p>
+
+        <p class="hidden">The ascent was continued.<br>
+        Said he often saw you by moonlight hovering over<br>
+        the crests out towards the Shendu country.--Confound it, man!"</p>
+
+        <p class="hidden">The lieutenant laughed cheerfully.<br>
+        The top<br>
+        side of it's three hundred degrees."</p>
+
+        <p class="hidden">"Three hundred degrees!" said Raut.</p>
+
+        <p class="hidden">"Three hundred centigrade, mind!" said Horrocks.<br>
+        And these<br>
+        few days it was necessary to employ in planking and carefully calking<br>
+        the vessel, and launching her.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lines = document.querySelectorAll(".poem .hidden");
+            let delay = 1000;
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.remove("hidden");
+                }, delay * (index + 1));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+engines:
+  markdownlint:
+    enabled: true
+  csslint:
+    enabled: true
+
+ratings:
+  paths:
+  - "**.md"
+  - "**.css"
